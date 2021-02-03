@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
     public TalkManager talkManager;
+    public QuestManager questManager;
     public GameObject talkPanel;
     public Image portraitImg;
     public Text talkText;
@@ -19,10 +20,10 @@ public class GameManager : MonoBehaviour
     public void Action(GameObject scanObj)
     {
 
+
+
         
-       
-            
-            scanObject = scanObj;
+        scanObject = scanObj;
             ObjData objData = scanObject.GetComponent<ObjData>();          
             Talk(objData.id, objData.isNpc);
       
@@ -33,15 +34,22 @@ public class GameManager : MonoBehaviour
 
     void Talk(int id, bool isNpc)
     {
-        string talkData = talkManager.GetTalk(id, talkIndex);
+        // Set Talk Data
+        int questTalkIndex = questManager.GetQuestTalkIndex(id);
+        string talkData = talkManager.GetTalk(id+ questTalkIndex, talkIndex);
 
+
+        // End Talk
         if(talkData == null)
         {
             isAction = false;
             talkIndex = 0;
+            Debug.Log(questManager.CheckQuest(id));
             return;
         }
 
+
+        // Continue Talk
         if (isNpc)
         {
             talkText.text = talkData.Split(':')[0];
