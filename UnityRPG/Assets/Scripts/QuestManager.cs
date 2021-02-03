@@ -23,21 +23,34 @@ public class QuestManager : MonoBehaviour
 
         questList.Add(20, new QuestData("루도의 동전 찾아주기."
                                             , new int[] { 5000, 2000 }));
+        questList.Add(30, new QuestData("모든 퀘스트 완료!"
+                                            , new int[] { 0 }));
     }
 
     public int GetQuestTalkIndex(int id)
     {
         return questId + questActionIndex;
     }
+
     public string CheckQuest(int id)
     {
-        if(id == questList[questId].npcId[questActionIndex])
+       
+        if (id == questList[questId].npcId[questActionIndex])
         questActionIndex++;
+
+        //Control Quest Object
+        ControlObject();
 
         if (questActionIndex == questList[questId].npcId.Length)
             NextQuest();
 
         return questList[questId].questName;
+    }
+
+    public string CheckQuest()
+    {
+        // Quest Name
+         return questList[questId].questName;
     }
 
     void NextQuest()
@@ -48,6 +61,16 @@ public class QuestManager : MonoBehaviour
 
     void ControlObject()
     {
-        switch()
+        switch(questId)
+        {
+            case 10:
+                if (questActionIndex == 2)
+                    questObject[0].SetActive(true);
+                break;
+            case 20:
+                if (questActionIndex == 1)
+                    questObject[0].SetActive(false);
+                break;
+        }
     }
 }

@@ -43,6 +43,19 @@ public class TalkManager : MonoBehaviour
                                                "그럼 일 좀 하나 해주면 좋을텐데...:0",
                                                "내 집 근처에 떨어진 동전 좀 가져다 줄래?:0"});
 
+        talkData.Add(20 + 1000, new string[] { "루도의 동전?:1",
+                                               "돈을 흘리고 다니면 못쓰지!:3",
+                                               "나중에 루도에게 한마디 해야겠어.:0"});
+        
+        talkData.Add(20 + 2000, new string[] { "찾으면 꼭 좀 가져다 줘.:1"});
+
+        talkData.Add(20 + 5000, new string[] { "근처에서 동전을 찾았다." });
+
+        talkData.Add(21 + 2000, new string[] { "앗.. 찾아줘서 고마워.:2" });
+
+
+
+
 
 
         //Portrait Data
@@ -60,6 +73,18 @@ public class TalkManager : MonoBehaviour
 
     public string GetTalk(int id, int talkIndex)
     {
+        if(!talkData.ContainsKey(id))
+        {
+
+            if (!talkData.ContainsKey(id - id % 10))
+            
+                return GetTalk(id - id % 100, talkIndex); // Get first Talk
+
+            else
+
+                return GetTalk(id - id % 10, talkIndex); // Get First Quest Talk
+        }
+
         if (talkIndex == talkData[id].Length)
             return null;
         else

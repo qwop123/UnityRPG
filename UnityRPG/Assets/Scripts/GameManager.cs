@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour
     public GameObject scanObject;
     public bool isAction;
     public int talkIndex;
+
+    void Start()
+    {
+        Debug.Log(questManager.CheckQuest());
+    }
     
 
 
