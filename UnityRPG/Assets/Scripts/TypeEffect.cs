@@ -10,6 +10,7 @@ public class TypeEffect : MonoBehaviour
     public int CharPerSeconds;
     public bool isAnim;
 
+    
 
     Text msgText;
     AudioSource audioSource;
@@ -24,7 +25,11 @@ public class TypeEffect : MonoBehaviour
     {
         msgText = GetComponent<Text>();
         audioSource = GetComponent<AudioSource>();
+        
     }
+
+   
+
 
     public void SetMsg(string msg)
     {

@@ -21,11 +21,12 @@ public class TalkManager : MonoBehaviour
         //Talk Data
         //NPC A:1000 , NPC B:2000
         //Box:100, Desk:200
+        
         talkData.Add(1000, new string[] { "안녕?:0", 
                                           "이 곳에 처음 왔구나?:1", 
                                           "한번 둘러보도록 해.:0"});
 
-        talkData.Add(2000, new string[] { ". . .:1", 
+        talkData.Add(2000, new string[] { " . . .:1", 
                                           "이 호수는 정말 아름답지?:0", 
                                           "사실 이 호수에는 무언가의 비밀이 숨겨져있다고 해.:2" });
 
@@ -38,7 +39,7 @@ public class TalkManager : MonoBehaviour
                                                "이 마을에 놀라운 전설이 있다는데...:1",
                                                "오른쪽 호수 쪽에 루도가 알려줄꺼야.:0" });
 
-        talkData.Add(11 + 2000, new string[] { ". . .:0",
+        talkData.Add(11 + 2000, new string[] { " . . .:0",
                                                "이 호수의 전설을 들으러 온거야?:1",
                                                "그럼 일 좀 하나 해주면 좋을텐데...:0",
                                                "내 집 근처에 떨어진 동전 좀 가져다 줄래?:0"});
