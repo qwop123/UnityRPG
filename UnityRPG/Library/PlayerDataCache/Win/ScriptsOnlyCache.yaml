@@ -35,10 +35,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -53,7 +51,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/TopDownM.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -87,37 +85,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 592}
+      Script: {instanceID: 594}
     - Class: 114
-      Script: {instanceID: 11268}
+      Script: {instanceID: 11270}
     - Class: 114
-      Script: {instanceID: 11562}
+      Script: {instanceID: 11564}
     - Class: 114
-      Script: {instanceID: 11618}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 11882}
+      Script: {instanceID: 11884}
     - Class: 114
-      Script: {instanceID: 11990}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 12298}
+      Script: {instanceID: 12300}
     - Class: 114
-      Script: {instanceID: 12304}
+      Script: {instanceID: 12306}
     - Class: 114
-      Script: {instanceID: 12308}
+      Script: {instanceID: 12310}
     - Class: 114
-      Script: {instanceID: 12600}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 13006}
+      Script: {instanceID: 13008}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13700}
+      Script: {instanceID: 13702}
     - Class: 114
-      Script: {instanceID: 13728}
+      Script: {instanceID: 13730}
     - Class: 114
-      Script: {instanceID: 13800}
+      Script: {instanceID: 13802}
     - Class: 114
-      Script: {instanceID: 14420}
+      Script: {instanceID: 14422}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -735,5 +733,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: "C:/Users/sueng/Desktop/\uC81C\uBE44/1.exe"
+  - Assets/TopDownM.unity
+  playerPath: C:/Users/sueng/Desktop/TopDownPC/TopDownRPG(PC).exe
